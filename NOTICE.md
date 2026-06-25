@@ -1,7 +1,7 @@
-# Notice
+# 声明
 
-GIF Stickers is an original open-source skill package by Sun Wuyuan / Alexsun1one.
+GIF Stickers / GIF 动态表情包 是 Sun Wuyuan / Alexsun1one 的原创开源 Skill 包。
 
-The example images in this repository are included as demonstrations of the workflow. The WeChat QR/search card in `assets/wechat-official-account.png` is the author's real public account asset.
+仓库里的示例图用于展示工作流和视觉方向。`assets/wechat-official-account.png` 是作者真实公众号二维码/搜一搜素材。
 
-This repository is not affiliated with OpenAI, GitHub, WeChat, or any referenced platform. Do not use this skill to copy protected IP, imitate living artists, or misrepresent endorsements.
+本仓库不隶属于 OpenAI、GitHub、微信或任何被提及的平台。请不要用这个 Skill 复制受保护 IP、仿冒在世艺术家，或暗示不存在的品牌背书。

@@ -1,9 +1,9 @@
-# Example Prompts
+# 示例 Prompt
 
 ```text
-Use gif-stickers with the attached portrait. Make 3 WeChat GIFs: 早安呀, 辛苦啦, 谢谢你. Use A-smoke first unless I explicitly approve a full pack.
+用 gif-stickers 基于这张真人照片做 3 个微信 GIF：早安呀、辛苦啦、谢谢你。先走 A-smoke，不要一上来盲跑完整大包。
 ```
 
 ```text
-Use gif-stickers for a Chinese publishing example. First explain the planned visual structure, then produce the final image prompt, then run the QA checklist from the skill.
+用 gif-stickers 做一个中文发布场景示例。先说明视觉结构，再写最终生图提示词，最后按 Skill 的 QA checklist 自检。
 ```

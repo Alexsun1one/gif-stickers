@@ -1,62 +1,63 @@
-# GIF Stickers
+# GIF Stickers / GIF 动态表情包
 
-> A skill and helper scripts for making WeChat-ready animated sticker packs from photos or generated sheets.
+> 把真人照片、角色图或多帧 sheet 做成微信规格 GIF 表情包，并带验证脚本。
 
-GIF Stickers packages the practical route from a person/reference image to platform-valid animated stickers. It includes exact-face photo puppet mode, AI likeness sheet mode, kinetic captions, GIF assembly, and verification helpers.
+这个 skill 处理“照片/角色参考 → 动态表情包”的完整流水线。它区分保留原照片像素的 B-photo-puppet、只做动字的 B-kinetic-text，以及允许 AI 重绘动作和场景的 A-face-anchor。适合做个人 IP、社群表情、课程老师、AI 讲师、项目发布表情包。
 
-## Examples
+## 示例图
 
-<p><img src="examples/images/male-business-preview-sheet.png" alt="Male business mentor preview sheet" width="100%"><br><sub>Male business mentor preview sheet</sub></p>
-<p><img src="examples/images/male-business-animated-preview.gif" alt="Animated preview" width="100%"><br><sub>Animated preview</sub></p>
-<p><img src="examples/images/polite-greetings-preview-sheet.png" alt="Polite greetings realistic preview" width="100%"><br><sub>Polite greetings realistic preview</sub></p>
+<p><img src="examples/images/male-business-preview-sheet.png" alt="男士商务讲师表情包总览" width="100%"><br><sub>男士商务讲师表情包总览</sub></p>
+<p><img src="examples/images/male-business-animated-preview.gif" alt="动态预览" width="100%"><br><sub>动态预览</sub></p>
+<p><img src="examples/images/polite-greetings-preview-sheet.png" alt="礼貌问候表情包" width="100%"><br><sub>礼貌问候表情包</sub></p>
 
-## What It Does
+## 它能做什么
 
-- Create WeChat-sized 240x240 looping GIF stickers under size constraints.
-- Choose between B-photo-puppet for exact face pixels and A-face-anchor for richer AI-redrawn motion.
-- Cut 1x4 or 2x4 generated sheets into frames and add dynamic Chinese captions.
-- Verify platform specs such as frame count, loop behavior, and file size.
+- 生成微信常用 240x240、循环播放、体积受控的 GIF。
+- 从 1x4 / 2x4 多帧 sheet 自动切帧、组 GIF、验证规格。
+- 根据需求选择“绝对保脸”还是“动作/场景更丰富但 AI 重绘相似脸”。
+- 处理中文 caption、动态文字、预览图、打包 zip。
+- 用脚本验证帧数、loop、文件体积和平台规格。
 
-## Install
+## 安装
 
-Clone this repository into your local Codex skills folder:
+把这个仓库克隆到本机 Codex skills 目录：
 
 ```bash
 mkdir -p ~/.codex/skills
 git clone https://github.com/Alexsun1one/gif-stickers.git ~/.codex/skills/gif-stickers
 ```
 
-If your agent expects a nested skill directory instead of a direct clone, copy the folder that contains `SKILL.md` into its skills directory.
+如果你的 Agent 使用其它 skills 目录，也可以把包含 `SKILL.md` 的这个仓库复制过去。
 
-## Use
+## 怎么用
 
-Example request:
+示例请求：
 
 ```text
-Use gif-stickers with the attached portrait. Make 3 WeChat GIFs: 早安呀, 辛苦啦, 谢谢你. Use A-smoke first unless I explicitly approve a full pack.
+用 gif-stickers 基于这张真人照片做 3 个微信 GIF：早安呀、辛苦啦、谢谢你。先走 A-smoke，不要一上来盲跑完整大包。
 ```
 
-The skill entry point is [`SKILL.md`](SKILL.md). Supporting rules live in [`references/`](references/) when this repo includes them; helper scripts live in [`scripts/`](scripts/) when available.
+Skill 入口是 [`SKILL.md`](SKILL.md)。细则在 [`references/`](references/)；如果这个仓库带脚本，脚本在 [`scripts/`](scripts/)。
 
-## Quality Bar
+## 质量要求
 
-- The image must explain a concrete idea, not merely decorate the page.
-- Chinese text should be readable at the actual publishing size.
-- The output should keep a stable style system across a set while letting each image fit its topic.
-- Generated examples are prompts and visual references, not fixed templates.
+- 先服务内容，再服务风格；图必须解释一个具体想法。
+- 中文默认要可读，标题、caption、标签不能只当装饰纹理。
+- 同一组图要风格统一，但每张图要贴合自己的段落/用途。
+- 示例图是工作流参考，不是唯一模板。
 
-## WeChat
+## 公众号
 
-More writeups, examples, and AI workflow notes are published on my WeChat official account. This is the real QR/search card used for the account, included as a normal bitmap asset rather than a stylized fake code.
+更完整的拆解、提示词、案例复盘、AI 写作和产品实践，我会继续写在公众号里。下面是我的真实公众号二维码/搜一搜卡片，不是仿造的装饰二维码。
 
 <p align="center">
   <img src="assets/wechat-official-account.png" alt="微信搜一搜：正在逐渐AI化" width="720">
 </p>
 
-## License
+## 开源协议
 
-MIT. See [`LICENSE`](LICENSE).
+MIT。见 [`LICENSE`](LICENSE)。
 
-## Notice
+## 声明
 
-This is an original open-source skill package by Sun Wuyuan / Alexsun1one. It is not affiliated with OpenAI, GitHub, WeChat, or any referenced platform. Avoid using it to imitate protected characters, living artists, or third-party brand assets without permission.
+这是 Sun Wuyuan / Alexsun1one 的原创开源 Skill 包。它不隶属于 OpenAI、GitHub、微信或任何被提及的平台。请不要用它去复制受保护 IP、仿冒在世艺术家，或暗示不存在的品牌背书。
