@@ -28,6 +28,8 @@ do not regenerate a whole set when only the encode is over budget.
 - **[MODE A, real-photo edit]** The delivery carries the verbatim honesty caveat (the output is a *stylized likeness, not the real face*). This is the Face-Truth Gate — see `SKILL.md (Face-Truth Gate)`. A Mode-A-edits-real-photo run that omits it FAILS regardless of how good the loop looks.
 - **[MODE A, real-photo edit]** The first pass is an A-smoke unless the user explicitly accepted a
   high-budget pack. Do not ship a surprise full A pack after many image-gen calls.
+- **[README/showcase]** At least one delivered asset is a real GIF that plays, not only a static
+  contact sheet. The subject has a memory hook at 240px and is not limited to work/training scenes.
 - **[MODE B]** The real photo is byte-for-byte undistorted — only composited text and deterministic photo motion (Ken-Burns / bounce / jelly) move. No face was re-synthesized. (The Mode B compositing path is documented in `render-pipeline.md`.)
 - **Real-pack test:** placed next to a real WeChat/LINE pack a person actually uses, does this look amateur or off? If yes, regenerate.
 
@@ -44,7 +46,7 @@ Frame-level failures — the producer must make new frames.
   4 sheets in a high-budget batch). Stop and report budget overrun; do not continue generating.
 - Two or three motions stack with no dominant beat; the eye does not know where to land.
 - A directional motion was ping-ponged and visibly rewinds (a one-way wave running backward). Re-author as a true cyclic loop (see `motion-library.md`).
-- The frames carry baked-in gibberish or melted text from the image model (Mode A) — kill it; captions are composited deterministically by `kinetic_text.py`, not generated.
+- The frames carry baked-in gibberish or melted text from the image model (Mode A). First regenerate with shorter native caption constraints. Use deterministic script typography only when the user requested post-production text, or as a clearly reported repair/platform-fidelity route.
 
 ## Repair Moves
 

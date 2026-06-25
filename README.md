@@ -6,6 +6,8 @@
 
 ## 示例图
 
+<p><img src="examples/images/paper-lantern-greeting.gif" alt="纸灯笼动态问候" width="240"><br><sub>纸灯笼动态问候：真实 GIF，已通过微信 240x240 规格验证。</sub></p>
+<p><img src="examples/images/paper-lantern-frame-sheet.png" alt="纸灯笼 1x4 帧表" width="100%"><br><sub>1x4 帧表：先锁定角色和动作，再切帧组 GIF。</sub></p>
 <p><img src="examples/images/male-business-preview-sheet.png" alt="男士商务讲师表情包总览" width="100%"><br><sub>男士商务讲师表情包总览</sub></p>
 <p><img src="examples/images/male-business-animated-preview.gif" alt="动态预览" width="100%"><br><sub>动态预览</sub></p>
 <p><img src="examples/images/polite-greetings-preview-sheet.png" alt="礼貌问候表情包" width="100%"><br><sub>礼貌问候表情包</sub></p>

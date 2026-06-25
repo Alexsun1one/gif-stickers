@@ -54,6 +54,7 @@ All three converge on ONE interface — a frames dir + `manifest.json` (the fram
 10. Export per platform: keep transparency by default, or pass `--flatten RRGGBB` for platforms that drop alpha (WeChat / X), per `references/platform-specs.md`.
 11. Verify the bytes — dims, size, fps, frames, loop — with `scripts/verify_output.py` and refuse non-compliant output (see **Verify** below).
 12. Run QA with `references/qa-checklist.md`; route failures to accept / regenerate / repair.
+13. For README/gallery/showcase stickers, ship at least one real animated GIF, not only a static frame sheet. Prefer original non-engineering characters (lanterns, pets, paper creatures, food spirits, clouds, plants) so the gallery shows charm beyond work/training scenarios.
 
 ## Face-Truth Gate
 
@@ -268,7 +269,7 @@ For generation, produce one sticker at a time and report:
 - mode + sub-path
 - token budget route + actual image-gen call count
 - the exact text rendered
-- native text status: Mode A should confirm the generated cells already contain the caption; Mode B/C should state deterministic script text
+- native text status: Mode A should confirm whether generated cells already contain the caption; if script typography was used, state that it was an explicit repair/platform-fidelity route rather than silent default
 - the chat moment + motion preset
 - platform + dims + size + fps + frames + loop (post-verify)
 - whether it passes QA or needs regeneration
