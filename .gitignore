@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local agent/runtime state
+.omx/
+.claude/
+.codex/
+
+# Large local outputs
+out/
+dist/
+build/
+*.zip
